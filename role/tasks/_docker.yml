@@ -1,0 +1,25 @@
+---
+- name: Add docker apt key
+  apt_key:
+    id: "{{ docker_fingerprint }}"
+    url: https://download.docker.com/linux/ubuntu/gpg
+    keyring: /etc/apt/trusted.gpg.d/docker.gpg
+
+- name: Add docker repo
+  apt_repository:
+    repo: "{{ docker_repository }}"
+  
+- name: Install Docker
+  apt:
+    name:
+      - docker-ce
+      - python3-docker
+      - docker-ce-cli
+      - containerd.io
+    update_cache: yes
+
+- name: Start and enable docker
+  systemd:
+    name: "docker"
+    enabled: yes
+    state: started

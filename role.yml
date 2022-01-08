@@ -1,0 +1,5 @@
+---
+- name: Setup Ubuntu
+  hosts: all
+  roles:
+    - role

@@ -1,0 +1,26 @@
+---
+# vars file for ansible-ubuntu
+hostname: "mybuntu"
+
+# System
+timezone_name: "Indian/Mauritius"
+
+# Docker
+enable_docker: false
+
+docker_fingerprint: 9DC858229FC7DD38854AE2D88D81803C0EBFCD88
+
+docker_repository: "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+
+# Users
+root_passwd_hash: "$6$EIw6N0WrDMk$misJeJ2sSFdTYknJ1MWasIQ7ZeEilX.uruCEtsvl4SMqSCLKe5CS3ddpNZ6jquGC7tmNg9ZeYctFeO20sGESP/"
+
+admin_username: baws
+
+admin_passwd_hash: "$6$PUmjXUOftg$zjClmUTlKwG6nAW.ECicffMBy9P6gs.5pimA4EVtPLNMm8bqiE1Weq7VX.1U5cUj5I.15w29F270F6KHWYnQS0"
+
+ssh_pub_url: "https://github.com/confuzeus.keys"
+
+# SSH
+ 
+sshd_port_number: 50000
