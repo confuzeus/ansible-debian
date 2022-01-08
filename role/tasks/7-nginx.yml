@@ -1,0 +1,26 @@
+---
+- name: Stop nginx
+  systemd:
+    name: nginx
+    state: stopped
+
+- name: Delete nginx config dir
+  file:
+    path: "/etc/nginx"
+    state: absent
+
+- name: Clone h5bp Nginx configs
+  git:
+    repo: "https://github.com/h5bp/server-configs-nginx.git"
+    dest: "/etc/nginx"
+    version: "{{ nginx_h5bp_version }}"
+
+- name: Template out certificate files
+  template:
+    src: "certificate_files.conf"
+    dest: "/etc/nginx/h5bp/tls/certificate_files.conf"
+
+- name: Start nginx
+  systemd:
+    name: nginx
+    state: started

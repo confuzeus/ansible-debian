@@ -24,3 +24,7 @@ ssh_pub_url: "https://github.com/confuzeus.keys"
 # SSH
  
 sshd_port_number: 50000
+
+# Nginx
+
+nginx_h5bp_version: "4.1.0"

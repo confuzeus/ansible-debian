@@ -29,3 +29,8 @@
   import_tasks: "6-fail2ban.yml"
   tags:
   - fail2ban
+
+- name: Import and execute nginx tasks
+  import_tasks: "7-nginx.yml"
+  tags:
+  - nginx
