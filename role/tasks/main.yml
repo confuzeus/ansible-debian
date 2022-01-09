@@ -34,3 +34,8 @@
   import_tasks: "7-nginx.yml"
   tags:
   - nginx
+
+- name: Import and execute vim tasks
+  import_tasks: "8-vim.yml"
+  tags:
+  - vim
