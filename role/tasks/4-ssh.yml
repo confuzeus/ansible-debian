@@ -5,6 +5,7 @@
     mode: 0600
   notify:
     - Reload sshd
+  when: gen_host_key == true
 
 - name: Generate ED25519 Host key
   openssh_keypair:
