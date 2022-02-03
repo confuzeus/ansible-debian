@@ -17,7 +17,4 @@
       - "python3-psycopg2"
       - "nginx"
       - "fail2ban"
-
-- name: Import and execute Docker tasks
-  import_tasks: "_docker.yml"
-  when: enable_docker == true
+      - "podman"
