@@ -24,7 +24,7 @@
   iptables:
     chain: INPUT
     protocol: tcp
-    destination_port:
+    destination_ports:
       - "80"
       - "443"
     jump: ACCEPT
