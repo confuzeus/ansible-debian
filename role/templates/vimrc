@@ -33,6 +33,9 @@ command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Color scheme
+autocmd vimenter * ++nested colorscheme zellner
+
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 
