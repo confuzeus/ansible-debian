@@ -19,7 +19,6 @@
       - "nginx"
       - "fail2ban"
       - "docker-compose"
-      - "ufw"
       - "make"
 
 - name: Import and execute Docker tasks
