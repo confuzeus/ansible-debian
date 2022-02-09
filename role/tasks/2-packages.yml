@@ -9,6 +9,8 @@
   apt:
     name:
       - "apt-transport-https"
+      - "curl"
+      - "lsb-release"
       - "ca-certificates"
       - "vim"
       - "tmux"
