@@ -16,7 +16,6 @@
       - "tmux"
       - "gnupg-agent"
       - "software-properties-common"
-      - "python3-psycopg2"
       - "nginx"
       - "fail2ban"
       - "docker-compose"
