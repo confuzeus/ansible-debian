@@ -20,6 +20,7 @@
       - "fail2ban"
       - "docker-compose"
       - "make"
+      - "ufw"
 
 - name: Import and execute Docker tasks
   import_tasks: "_docker.yml"
