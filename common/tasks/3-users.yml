@@ -14,15 +14,10 @@
     name: "{{ admin_username }}"
     password: "{{ admin_passwd_hash }}"
     append: yes
-    groups: sshusers
+    groups:
+      - sshusers
+      - docker
     shell: "/bin/bash"
-
-- name: Add admin user to docker group
-  user:
-    name: "{{ admin_username }}"
-    append: yes
-    groups: docker
-  when: enable_docker == true
 
 - name: Add public key
   authorized_key:
