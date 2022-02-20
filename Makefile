@@ -1,4 +1,7 @@
-.PHONY help common system packages users ssh firewall fail2ban nginx vim
+.PHONY: help common system packages users ssh firewall fail2ban nginx vim
+
+export ANSIBLE_BECOME_ASK_PASS=True
+export ANSIBLE_ASK_VAULT_PASS=False
 
 help:
 	@echo Run make common to execute the common role
@@ -12,28 +15,28 @@ help:
 	@echo Run make vim to execute the vim tasks
 
 common:
-	ansible-playbook --ask-become-pass -i inventory.yml playbook.yml
+	ansible-playbook -i inventory.yml playbook.yml
 
 system:
-	ansible-playbook --ask-become-pass -i inventory.yml --tags "system" playbook.yml
+	ansible-playbook -i inventory.yml --tags "system" playbook.yml
 
 packages:
-	ansible-playbook --ask-become-pass -i inventory.yml --tags "packages" playbook.yml
+	ansible-playbook -i inventory.yml --tags "packages" playbook.yml
 
 users:
-	ansible-playbook --ask-become-pass -i inventory.yml --tags "users" playbook.yml
+	ansible-playbook -i inventory.yml --tags "users" playbook.yml
 
 ssh:
-	ansible-playbook --ask-become-pass -i inventory.yml --tags "ssh" playbook.yml
+	ansible-playbook -i inventory.yml --tags "ssh" playbook.yml
 
 firewall:
-	ansible-playbook --ask-become-pass -i inventory.yml --tags "firewall" playbook.yml
+	ansible-playbook -i inventory.yml --tags "firewall" playbook.yml
 
 fail2ban:
-	ansible-playbook --ask-become-pass -i inventory.yml --tags "fail2ban" playbook.yml
+	ansible-playbook -i inventory.yml --tags "fail2ban" playbook.yml
 
 nginx:
-	ansible-playbook --ask-become-pass -i inventory.yml --tags "nginx" playbook.yml
+	ansible-playbook -i inventory.yml --tags "nginx" playbook.yml
 
 vim:
-	ansible-playbook --ask-become-pass -i inventory.yml --tags "vim" playbook.yml
+	ansible-playbook -i inventory.yml --tags "vim" playbook.yml
